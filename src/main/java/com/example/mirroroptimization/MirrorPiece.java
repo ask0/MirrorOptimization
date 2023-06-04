@@ -1,55 +1,37 @@
 package com.example.mirroroptimization;
 
 public class MirrorPiece {
-    private int width;
-    private int height;
-    private int posX;
-    private int posY;
+    private double width;
+    private double height;
+    private double posX;
+    private double posY;
 
-    public MirrorPiece(int width, int height) {
+    public MirrorPiece(double width, double height) {
         this.width = width;
         this.height = height;
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public int getPosX() {
+    public double getPosX() {
         return posX;
     }
 
-    public void setPosX(int posX) {
+    public void setPosX(double posX) {
         this.posX = posX;
     }
 
-    public int getPosY() {
+    public double getPosY() {
         return posY;
     }
 
-    public void setPosY(int posY) {
+    public void setPosY(double posY) {
         this.posY = posY;
-    }
-
-    public int getArea() {
-        return width * height;
-    }
-
-    public boolean isOverlap(MirrorPiece otherPiece) {
-        int thisRight = posX + width;
-        int thisBottom = posY + height;
-        int otherRight = otherPiece.posX + otherPiece.width;
-        int otherBottom = otherPiece.posY + otherPiece.height;
-
-        if (posX >= otherRight || otherPiece.posX >= thisRight)
-            return false;
-        if (posY >= otherBottom || otherPiece.posY >= thisBottom)
-            return false;
-
-        return true;
     }
 }

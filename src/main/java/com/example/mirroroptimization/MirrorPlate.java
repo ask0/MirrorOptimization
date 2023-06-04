@@ -1,46 +1,34 @@
 package com.example.mirroroptimization;
 
+import javafx.scene.control.Alert;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MirrorPlate {
-    private int width;
-    private int height;
+    private double width;
+    private double height;
     private List<MirrorPiece> pieces;
 
-    public MirrorPlate(int width, int height) {
+    public MirrorPlate(double width, double height) {
         this.width = width;
         this.height = height;
         this.pieces = new ArrayList<>();
     }
 
-    // Getters, setters...
-
-    public void addPiece(MirrorPiece piece) {
-        pieces.add(piece);
-    }
-
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getHeight() {
+    public double getHeight() {
         return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
     }
 
     public List<MirrorPiece> getPieces() {
         return pieces;
     }
 
-    public void setPieces(List<MirrorPiece> pieces) {
-        this.pieces = pieces;
+    public void addPiece(MirrorPiece piece) {
+        pieces.add(piece);
     }
 }
